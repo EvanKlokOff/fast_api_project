@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from .schemas import Item_to_add
-from .repository import repository as item_repository
+from src.item_storage.schemas import Item_to_add
+from src.item_storage.repository import repository as item_repository
 
 
 router = APIRouter(

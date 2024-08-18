@@ -1,4 +1,4 @@
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Optional
 from datetime import datetime
 
@@ -10,8 +10,8 @@ class item_filter(BaseModel):
 
 class Item_to_add(BaseModel):
     name: str
-    price: float
-    description: Optional[str] = None
+    price: float = Field(..., ge=0)
+    description: Optional[str]
 
 
 class Item(Item_to_add):

@@ -1,4 +1,4 @@
-from .schemas import item_filter
+from src.item_storage.schemas import item_filter
 from typing import Annotated
 from fastapi import Depends
 
